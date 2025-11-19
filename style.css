@@ -1,0 +1,143 @@
+/* Grid
+---------------*/
+header {
+    display: grid;
+    grid-area: header;
+}
+
+.cover-pic {
+    display: grid;
+    grid-area: picture;
+    width: 80%;
+    height: 20%;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+}
+
+.items {
+    display: grid;
+    grid-area: items;
+}
+
+.sec-1 {
+    display: grid;
+    grid-area: sec-1;
+}
+
+.sec-2 {
+    display: grid;
+    grid-area: sec-2;
+}
+
+article {
+    display: grid;
+    grid-area: article;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "header header header"
+        "picture picture picture"
+        "main items items"
+        "main sec-1 sec-2"
+        "article article article"
+        "footer footer footer";
+}
+
+/* Header 
+-------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    width: 30%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    font-size: 2rem;
+    padding: 15px;
+    margin-left: 5%;
+}
+
+
+/* Main 
+-------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: pink;
+}
+
+h1 {
+    height: 10%;
+}
+
+.cover-pic {
+    max-width: 80%;
+}
+
+/* Pics & Content 
+-------------------------*/
+.items {
+    display: flex;
+    justify-content: space-evenly;
+    background: lightgreen;
+}
+
+section {
+    display: flex;
+    background: lightblue;
+}
+
+/* Article 
+------------------------*/
+article {
+    display: flex;
+    justify-content: start;
+    background: rgb(255, 198, 91)
+}
+
+/* Footer
+-----------------------*/
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "picture"
+            "main"
+            "items"
+            "sec-1"
+            "sec-2"
+            "article"
+            "footer";
+    }
+}
